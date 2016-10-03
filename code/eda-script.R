@@ -12,11 +12,11 @@ sink()
 
 
 png("histogram-tv.png")
-hist(dat$TV)
+hist(dat$TV,main="Histogram of TV", xlab="TV")
 #dev.off()
 
 png("histogram-sales.png")
-hist(dat$Sales)
+hist(dat$Sales,main="Histogram of Sales", xlab="Sales")
 dev.off()
 
 
