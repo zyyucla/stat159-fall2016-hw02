@@ -11,11 +11,11 @@ summary(dat)
 sink()
 
 
-png("histogram-tv.png")
+png("../images/histogram-tv.png")
 hist(dat$TV,main="Histogram of TV", xlab="TV")
 #dev.off()
 
-png("histogram-sales.png")
+png("../images/histogram-sales.png")
 hist(dat$Sales,main="Histogram of Sales", xlab="Sales")
 dev.off()
 
