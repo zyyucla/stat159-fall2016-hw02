@@ -6,7 +6,7 @@ str(dat)
 summary(dat)
 
 #Output result to the file
-sink("../eda-script.txt")
+sink("../data/eda-output.txt")
 summary(dat)
 sink()
 
