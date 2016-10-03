@@ -10,7 +10,7 @@ regsum
 save(reg,file="regression.RData")
 
 #scatterplot with regression line
-png("scatterplot.png")
+png("../images/scatterplot.png")
 plot(dat$TV,dat$Sales,pch = 19,col="#8e8f94")
 abline(reg,col="#5679DF",xlab="TV", ylab="Sales",lwd=2)
 
