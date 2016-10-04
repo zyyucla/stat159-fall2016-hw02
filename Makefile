@@ -8,5 +8,8 @@ data: Advertising.csv
 clean:
 	rm -f report/report.rmd report/report.pdf
 
-eda-script.txt: code/eda-script.R
-	Rscript code/eda-script.R
+report.pdf: regression.RData:report.Rmd regression.RData scatterplot-tv-sales.png
+
+regression.RData:regression-script.R Advertising.csv
+
+eda-output.txt: eda-script.R Advertising.csv
