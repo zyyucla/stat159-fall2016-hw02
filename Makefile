@@ -1,11 +1,11 @@
 .PHONY:all data clean
 
-#all: report.pdf eda-output.txt regression.RData
+all: report.pdf eda-output.txt regression.RData
 
-data:
-	 curl -o data/Advertising.csv  http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv
+data: Advertising.csv
+	curl -o data/Advertising.csv  http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv
 
-#clean:
+clean:
 	rm -f report/report.rmd report/report.pdf
 
 eda-script.txt: code/eda-script.R
