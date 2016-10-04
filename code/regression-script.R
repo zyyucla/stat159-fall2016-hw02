@@ -14,4 +14,8 @@ png("../images/scatterplot.png")
 plot(dat$TV,dat$Sales,xlab="TV", ylab="Sales",pch = 19,col="#8e8f94")
 abline(reg,col="#bd0300",lwd=2)
 
+pdf("../images/scatterplot.pdf")
+plot(dat$TV,dat$Sales,xlab="TV", ylab="Sales",pch = 19,col="#8e8f94")
+abline(reg,col="#bd0300",lwd=2)
+
 dev.off()
