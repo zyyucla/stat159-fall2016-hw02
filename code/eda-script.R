@@ -17,7 +17,7 @@ hist(dat$TV,main="Histogram of TV", xlab="TV")
 #dev.off()
 
 pdf("../images/histogram-sales.pdf")
-hist(dat$Sales,main="Histogram of TV", xlab="Sales")
+hist(dat$Sales,main="Histogram of Sales", xlab="Sales")
 png("../images/histogram-sales.png")
 hist(dat$Sales,main="Histogram of Sales", xlab="Sales")
 dev.off()
