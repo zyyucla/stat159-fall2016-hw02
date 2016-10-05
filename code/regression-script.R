@@ -20,4 +20,4 @@ save(reg,file="regression.RData")
 #plot(dat$TV,dat$Sales,main="Linear regression of TV ads on Sales",xlab="TV", ylab="Sales",pch = 19,col="#8e8f94")
 #abline(reg,col="#bd0300",lwd=2)
 
-dev.off()
+#dev.off()
