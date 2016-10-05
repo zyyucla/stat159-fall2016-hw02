@@ -9,7 +9,7 @@ names(reg)
 regsum<-summary(reg)
 regsum
 names(regsum)
-save(reg,file="regression.RData")
+save(regsum,file="regression.RData")
 
 #scatterplot with regression line
 png("../images/scatterplot-tv-sales.png")
