@@ -2,14 +2,18 @@
 
 all: report.pdf eda-output.txt regression.RData
 
-data: Advertising.csv
+data: 
 	curl -o data/Advertising.csv  http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv
 
 clean:
 	rm -f report/report.rmd report/report.pdf
 
-report.pdf: regression.RData:report.Rmd regression.RData scatterplot-tv-sales.png
+regression.RData:code/regression-script.R  data/Advertising.csv
+	Rscript code/regression-script.R
 
-regression.RData:regression-script.R Advertising.csv
+eda-output.txt: code/eda-script.R  data/Advertising.csv
+	Rscript code/eda-script.R
 
-eda-output.txt: eda-script.R Advertising.csv
+report.pdf: report/report.Rmd regression.RData images/scatterplot-tv-sales.png
+	pandoc report/report.Rmd --latex-engine=xelatex -s -o report/report.pdf
+
