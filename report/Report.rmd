@@ -28,12 +28,16 @@ We compute the regression coefficients. The regression coefficients is summarize
 <hr>
          Table 1: Information about Regression Coefficients
  ``` {r, echo=FALSE}
-   library(knitr)
-   load("regression.RData", ex<-new.env())
-   ls.str(ex)}```
+   library(xtable)
+   load("../data/regression.RData")
+   reg_table<-xtable((summary(reg)$coefficients))
+   print(reg_table,type="html")
+   
+```
+  
    More information about the least squares model is given in the table below:
 <hr>
-         Table 2: Regression Quality Indices 
+          Table 2: Regression Quality Indices 
  
    The scatterplot of the fitted regression line is shown in Figure 1. 
        
