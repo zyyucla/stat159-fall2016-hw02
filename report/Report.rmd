@@ -27,7 +27,8 @@ a simple linear model:
 We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
 <hr>
          Table 1: Information about Regression Coefficients
- ``` {r,xtable,results="asis",eval=TRUE, echo=FALSE}
+ ``` {r results="asis" eval=TRUE echo=FALSE}
+   library(knitr)
    library(xtable)
    load("../data/regression.RData")
    reg_table<-xtable((summary(reg)$coefficients, digits=c(0,2,2,1,2))
