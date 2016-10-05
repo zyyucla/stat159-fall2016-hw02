@@ -27,10 +27,11 @@ a simple linear model:
 We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
 <hr>
          Table 1: Information about Regression Coefficients
- ``` {r, echo=FALSE, results="asis" }
+ ``` {r xtable echo=FALSE, results="asis" }
    library(xtable)
    load("../data/regression.RData")
-   reg_table<-xtable(summary(reg)$Coefficients, digits=c(0,2,2,1,2))
+   reg_coe<-summary(reg)$Coefficients
+   reg_table<-xtable(reg_coe, digits=c(0,2,2,1,2))
    print(reg_table,type="html")
    
 ```
