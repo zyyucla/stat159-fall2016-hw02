@@ -30,7 +30,7 @@ We compute the regression coefficients. The regression coefficients is summarize
  ``` {r, echo=FALSE, results="asis" }
    library(xtable)
    load("../data/regression.RData")
-   reg_table<-xtable((summary(reg)$Coefficients), digits=c(0,2,2,1,2))
+   reg_table<-xtable(summary(reg)$Coefficients, digits=c(0,2,2,1,2))
    print(reg_table,type="html")
    
 ```
