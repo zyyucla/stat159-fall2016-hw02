@@ -8,14 +8,14 @@ data:
 clean:
 	rm -f report/report.rmd report/report.pdf
 
-regression.RData:code/regression-script.R  data/Advertising.csv
+regression.RData: code/regression-script.R  data/Advertising.csv
 	Rscript code/regression-script.R
 
 eda-output.txt: code/eda-script.R  data/Advertising.csv
 	Rscript code/eda-script.R
 
-report.pdf: report/report.Rmd regression.RData images/scatterplot-tv-sales.png
-	pandoc report/report.Rmd --latex-engine=xelatex -s -o report/report.pdf
+report.pdf: report/report.rmd data/regression.RData images/scatterplot-tv-sales.png
+	cd report && Rscript -e "library(rmarkdown); library(xtable); rmarkdown::render('report.rmd', 'pdf_document')"
 
 report.html: report.rmd
 	pandoc report.rmd -s -o report.html
