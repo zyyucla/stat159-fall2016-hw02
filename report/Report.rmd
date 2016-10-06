@@ -27,12 +27,12 @@ a simple linear model:
 We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
 
          Table 1: Information about Regression Coefficients
-  <hr>
+  
  ``` {r,xtable,echo=FALSE, results="asis" }
    library(xtable)
    load("../data/regression.RData")
    reg_coe<-summary(reg)$coefficients
-   reg_table<-xtable(reg_coe, digits=c(0,2,2,1,2))
+   reg_table<-xtable(reg_coe,caption="Table 1: Information about Regression Coefficients", digits=c(0,2,2,1,2))
    print(reg_table,type="html")
    
  ```
@@ -42,8 +42,7 @@ We compute the regression coefficients. The regression coefficients is summarize
           Table 2: Regression Quality Indices 
  
    The scatterplot of the fitted regression line is shown in Figure 1. 
-       
-          Figure 1. Scatterplot with fitted regression line 
+      ![](../images/scatterplot-sales-tv.png)
    
 
 
