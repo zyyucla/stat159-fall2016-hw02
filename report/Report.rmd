@@ -25,16 +25,17 @@ a simple linear model:
 
 ####**Results**
 We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
-<hr>
+
          Table 1: Information about Regression Coefficients
- ``` {r, echo=FALSE, results="asis" }
+  <hr>
+ ``` {r,xtable,echo=FALSE, results="asis" }
    library(xtable)
    load("../data/regression.RData")
    reg_coe<-summary(reg)$coefficients
    reg_table<-xtable(reg_coe, digits=c(0,2,2,1,2))
    print(reg_table,type="html")
    
-```
+ ```
   
    More information about the least squares model is given in the table below:
 <hr>
@@ -43,7 +44,8 @@ We compute the regression coefficients. The regression coefficients is summarize
    The scatterplot of the fitted regression line is shown in Figure 1. 
        
           Figure 1. Scatterplot with fitted regression line 
-     
+   
+
 
 ####**Analysis**
   Visual results from Figure 1 indicates that a linear fit captures the essence of the relationship, although it is somewhat deficient in the left of the plot. 
