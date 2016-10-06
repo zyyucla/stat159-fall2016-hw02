@@ -17,3 +17,5 @@ eda-output.txt: code/eda-script.R  data/Advertising.csv
 report.pdf: report/report.Rmd regression.RData images/scatterplot-tv-sales.png
 	pandoc report/report.Rmd --latex-engine=xelatex -s -o report/report.pdf
 
+report.html: report.rmd
+	pandoc report.rmd -s -o report.html
