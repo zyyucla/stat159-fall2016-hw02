@@ -1,5 +1,5 @@
 ---
-output: pdf_document
+output: html_document
 ---
 
 
@@ -36,16 +36,7 @@ a simple linear model:
    print(reg_table, caption.placement = "top",type="html")
 ```
    More information about the least squares model is given in the table below:  
-          <center>Table 2: Regression Quality Indices </center>
-    
-       <table align="center" style="margin:0px auto;"></table>
-      <captio> Table 2: Regression Quality Indices
-       <tr><th> Quantity</th> <th>Value</th> </tr>
-       <tr><td>RSS</td> <td>3.26</td> </tr>
-       <tr><td>R2</td><td>0.61</td></tr>
-       <tr><td>F-stat</td><td>312.14</td></tr>
-      </table>
-   
+         
    The scatterplot of the fitted regression line is shown in Figure below.  
      <center> ![](https://raw.githubusercontent.com/zyyucla/stat159-fall2016-hw02/master/images/scatterplot-tv-sales.png)</center>  
      
