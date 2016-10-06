@@ -17,5 +17,4 @@ eda-output.txt: code/eda-script.R  data/Advertising.csv
 report.pdf: report/report.rmd data/regression.RData images/scatterplot-tv-sales.png
 	cd report && Rscript -e "library(rmarkdown); library(xtable); rmarkdown::render('report.rmd', 'pdf_document')"
 
-report.html: report.rmd
-	pandoc report.rmd -s -o report.html
+
