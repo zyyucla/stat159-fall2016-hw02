@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 
 
 ###Simple Regression Analysis
@@ -20,30 +23,33 @@ three different media: **TV,** **Radio**, and **Newspaper**.
 ####**Methodology**
   We consider one media from the data set, **TV**, and study its relationship with **Sales**. For this purpose, we use
 a simple linear model: 
-	                    _Sales= β0+ β1TV_
-  To estimate the coefficients β0 and β1 we fit a regression model via the least squares criterion
+	                    Sales= $\beta$_0+ $\beta$_1*TV
+  To estimate the coefficients $\beta$_0 and $\beta$_1 we fit a regression model via the least squares criterion
 
 ####**Results**
-We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
-
-         Table 1: Information about Regression Coefficients
-  
- ``` {r,xtable,echo=FALSE, results="asis" }
-   library(xtable)
+  We compute the regression coefficients. The regression coefficients is summarized in Table 1 below:
+```{r,echo=FALSE, results="asis", comment=FALSE}
    load("../data/regression.RData")
+   library(xtable)
    reg_coe<-summary(reg)$coefficients
-   reg_table<-xtable(reg_coe,caption="Table 1: Information about Regression Coefficients", digits=c(0,2,2,1,2))
-   print(reg_table,type="html")
+   reg_table<-xtable(reg_coe,caption="Table 1: Information about regression coefficients",digits=2,floating=FALSE)
+   print(reg_table, caption.placement = "top",type="html")
+```
+   More information about the least squares model is given in the table below:  
+          <center>Table 2: Regression Quality Indices </center>
+    
+       <table align="center" style="margin:0px auto;"></table>
+      <captio> Table 2: Regression Quality Indices
+       <tr><th> Quantity</th> <th>Value</th> </tr>
+       <tr><td>RSS</td> <td>3.26</td> </tr>
+       <tr><td>R2</td><td>0.61</td></tr>
+       <tr><td>F-stat</td><td>312.14</td></tr>
+      </table>
    
- ```
+   The scatterplot of the fitted regression line is shown in Figure below.  
+     <center> ![](https://raw.githubusercontent.com/zyyucla/stat159-fall2016-hw02/master/images/scatterplot-tv-sales.png)</center>  
+     
   
-   More information about the least squares model is given in the table below:
-<hr>
-          Table 2: Regression Quality Indices 
- 
-   The scatterplot of the fitted regression line is shown in Figure 1. 
-      ![](../images/scatterplot-sales-tv.png)
-   
 
 
 ####**Analysis**
@@ -53,3 +59,7 @@ We compute the regression coefficients. The regression coefficients is summarize
      
 ####**Conclusion**
    In conclusion, by taking data and using linear regression model, computing all relevant coefficients, we see a relatively linear relationship between TV ads and sales, and hence a non-trivial effects of TV advertising on product sales.
+   
+####**Acknowledgement**
+  I would like to thank the author of the book **An Introduction to Statistical Learning** Gareth James, who provides the data and such a valuable practice lesson. I would 
+  also like to thanks the TA and professor for providing help to finis this assignment.
