@@ -36,7 +36,11 @@ a simple linear model:
    print(reg_table, caption.placement = "top",type="html")
 ```
    More information about the least squares model is given in the table below:  
-         
+Quantity               | Value
+-----------------------|-------
+Residual Standard Error| 3.259
+R-squared              | 0.612
+F-statistic            | 312.1         
    The scatterplot of the fitted regression line is shown in Figure below.  
      <center> ![](https://raw.githubusercontent.com/zyyucla/stat159-fall2016-hw02/master/images/scatterplot-tv-sales.png)</center>  
      
