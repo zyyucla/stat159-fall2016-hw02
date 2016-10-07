@@ -35,6 +35,12 @@ a simple linear model:
    reg_table<-xtable(reg_coe,caption="Table 1: Information about regression coefficients",digits=2,floating=FALSE)
    print(reg_table, caption.placement = "top",type="html")
 ```
+Coefficients| Estimate | Std. Error | t-statistic | p-value
+------------|----------|------------|-------------|---------
+Intercept   | 7.0325   | 0.4578     | 15.36       | <0.0001
+TV          | 0.0475   | 0.0027     | 17.67       | <0.0001
+
+
    More information about the least squares model is given in the table below:  
 Quantity               | Value
 -----------------------|-------
